@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>HANZU Skyblock – Máy chủ Minecraft Skyblock Việt Nam</title>
-<meta name="description" content="HANZU Skyblock – máy chủ Minecraft Skyblock Việt Nam cho Java và Bedrock. IP: hanzumc.com:31468. Đảo riêng, minion, dungeon, săn boss, vote nhận quà mỗi ngày.">
+<meta name="description" content="HANZU Skyblock – máy chủ Minecraft Skyblock Việt Nam miễn phí cho Java 1.8 – 1.21+ và Bedrock. IP: hanzumc.com. Đảo riêng, minion, pet, dungeon, săn boss, vote nhận quà mỗi ngày.">
 <meta name="theme-color" content="#060a1f">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="canonical" href="https://www.hanzumc.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="HANZU Skyblock">
 <meta property="og:title" content="HANZU Skyblock – Máy chủ Minecraft Skyblock Việt Nam">
-<meta property="og:description" content="HANZU Skyblock – máy chủ Minecraft Skyblock Việt Nam cho Java và Bedrock. IP: hanzumc.com:31468. Đảo riêng, minion, dungeon, săn boss, vote nhận quà mỗi ngày.">
+<meta property="og:description" content="HANZU Skyblock – máy chủ Minecraft Skyblock Việt Nam miễn phí cho Java 1.8 – 1.21+ và Bedrock. IP: hanzumc.com. Đảo riêng, minion, pet, dungeon, săn boss, vote nhận quà mỗi ngày.">
 <meta property="og:url" content="https://www.hanzumc.com/">
 <meta property="og:image" content="https://www.hanzumc.com/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -164,6 +164,8 @@ p{margin:0}
 .feat:hover{border-color:var(--line-2);transform:translateY(-3px)}
 .ficon{width:52px;height:52px;border-radius:12px;display:grid;place-items:center;background:rgba(95,240,255,.07);border:1px solid var(--line)}
 .ficon img{width:32px;height:32px;image-rendering:pixelated}
+.feat{position:relative}
+.new{position:absolute;top:18px;right:18px;font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--gold);background:rgba(255,208,77,.12);border:1px solid rgba(255,208,77,.35);border-radius:999px;padding:4px 10px}
 .feat h3{font-family:var(--f-display);font-weight:400;font-size:19px;letter-spacing:.02em}
 .feat p{color:var(--muted);font-size:15px}
 .feat .foot{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--dim);border-top:1px solid var(--line);padding-top:12px;margin-top:4px}
@@ -320,11 +322,11 @@ footer{background:linear-gradient(rgba(16,10,5,.8),rgba(16,10,5,.88)),var(--dirt
       <a href="#noi-quy">Nội quy</a>
       <a href="#hoi-dap">Hỏi đáp</a>
     </div>
-    <a class="cta" href="https://discord.gg/2d8pBXnRa" target="_blank" rel="noopener">VÀO DISCORD</a>
+    <a class="cta" href="https://discord.gg/hanzuskyblock" target="_blank" rel="noopener">VÀO DISCORD</a>
     <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-links">Menu</button>
     <div class="mobile-links" id="mobile-links" hidden>
       <a href="#trang-thai">Trạng thái</a><a href="#loi-choi">Lối chơi</a><a href="#bat-dau">Bắt đầu</a><a href="#vote">Vote</a><a href="#noi-quy">Nội quy</a><a href="#hoi-dap">Hỏi đáp</a>
-      <a href="https://discord.gg/2d8pBXnRa" target="_blank" rel="noopener">Vào Discord ↗</a>
+      <a href="https://discord.gg/hanzuskyblock" target="_blank" rel="noopener">Vào Discord ↗</a>
     </div>
   </div>
 </nav>
@@ -332,11 +334,11 @@ footer{background:linear-gradient(rgba(16,10,5,.8),rgba(16,10,5,.88)),var(--dirt
 <header class="hero" id="top">
   <canvas id="sky" aria-hidden="true"></canvas>
   <div class="wrap hero-in">
-    <span class="chip"><i class="dot" id="hero-dot"></i>Máy chủ Skyblock · Java + Bedrock · 1.21.11</span>
+    <span class="chip"><i class="dot" id="hero-dot"></i>Máy chủ Skyblock · Java + Bedrock · 1.8 – 1.21+</span>
     <h1><span class="l1">CHÀO MỪNG ĐẾN</span><span class="l2">HANZU SKYBLOCK</span></h1>
-    <p class="sub">Một hòn đảo nhỏ. Một thế giới riêng. Cộng đồng Skyblock Việt Nam cho người chơi PC và điện thoại.</p>
+    <p class="sub">Một hòn đảo nhỏ. Một thế giới riêng. Skyblock Việt Nam miễn phí cho PC và điện thoại, vào được từ bản 1.8 đến 1.21+.</p>
     <div class="hero-actions">
-      <button class="btn primary" type="button" data-copy="hanzumc.com:31468">SAO CHÉP IP <small>hanzumc.com:31468</small></button>
+      <button class="btn primary" type="button" data-copy="hanzumc.com">SAO CHÉP IP <small>hanzumc.com</small></button>
       <a class="btn ghost" href="#trang-thai">XEM TRẠNG THÁI</a>
     </div>
     <p class="live-line" id="live-line" hidden><i class="dot on"></i><span><b id="live-n">0</b> người đang trên đảo</span></p>
@@ -360,28 +362,28 @@ footer{background:linear-gradient(rgba(16,10,5,.8),rgba(16,10,5,.88)),var(--dirt
         </div>
         <div class="count-row">
           <span class="lbl">Người chơi</span>
-          <div class="count"><span id="st-n">–</span><small>/ <span id="st-max">100</span></small></div>
+          <div class="count"><span id="st-n">–</span><small>/ <span id="st-max">200</span></small></div>
           <div class="bar"><i id="st-bar"></i></div>
-          <p class="meta" id="st-meta">Phiên bản 1.21.11 · Paper</p>
+          <p class="meta" id="st-meta">Phiên bản 1.8 – 1.21+</p>
         </div>
         <div class="mpl" aria-label="Server trong danh sách Multiplayer">
           <img id="mpl-icon" alt="">
-          <div><div class="nm">HANZU Skyblock</div><div class="motd" id="st-motd"><span>✦ HANZU SKYBLOCK ✦</span><span>ĐẢO RIÊNG • DUNGEON • BOSS │ hanzumc.com</span></div></div>
-          <div class="pc"><span id="mpl-n">–/100</span><span class="bars" id="mpl-bars"><i></i><i></i><i></i><i></i><i></i></span></div>
+          <div><div class="nm">HANZU Skyblock</div><div class="motd" id="st-motd"><span>HANZU SKYBLOCK | 1.8 - 1.21+</span><span>Minion • Pet • Dungeon • Free to Play</span></div></div>
+          <div class="pc"><span id="mpl-n">–/200</span><span class="bars" id="mpl-bars"><i></i><i></i><i></i><i></i><i></i></span></div>
         </div>
         <div class="who" id="who" hidden>
           <span class="lbl">Đang trên đảo</span>
           <ul class="heads" id="heads"></ul>
         </div>
         <div class="addr">
-          <div class="addr-row"><span class="k">JAVA</span><span class="v">hanzumc.com:31468</span><button class="copy" type="button" data-copy="hanzumc.com:31468">Sao chép</button></div>
-          <div class="addr-row"><span class="k">BEDROCK</span><span class="v">hanzumc.com<em>Cổng 31205</em></span><button class="copy" type="button" data-copy="hanzumc.com">Sao chép</button></div>
+          <div class="addr-row"><span class="k">JAVA</span><span class="v">hanzumc.com<em>Không cần ghi cổng</em></span><button class="copy" type="button" data-copy="hanzumc.com">Sao chép</button></div>
+          <div class="addr-row"><span class="k">BEDROCK</span><span class="v">hanzumc.com<em>Cổng 25679</em></span><button class="copy" type="button" data-copy="hanzumc.com">Sao chép</button></div>
         </div>
       </div>
       <div class="tiles">
         <div class="card tile" style="--c:var(--cyan)"><b>JAVA + PE</b><span>Chơi chung một thế giới</span></div>
-        <div class="card tile" style="--c:var(--gold)"><b>1.21.11</b><span>Phiên bản Java</span></div>
-        <div class="card tile" style="--c:var(--go)"><b>97%</b><span>Uptime trên Minecraft-MP</span></div>
+        <div class="card tile" style="--c:var(--gold)"><b>1.8 – 1.21+</b><span>Mọi phiên bản Java</span></div>
+        <div class="card tile" style="--c:var(--go)"><b>FREE TO PLAY</b><span>Chơi miễn phí · 200 chỗ</span></div>
       </div>
     </div>
     <p class="st-note" id="st-note"></p>
@@ -397,10 +399,10 @@ footer{background:linear-gradient(rgba(16,10,5,.8),rgba(16,10,5,.88)),var(--dirt
     <div class="feats">
       <article class="card feat"><div class="ficon"><img data-icon="grass" alt=""></div><h3>ĐẢO RIÊNG</h3><p>Bắt đầu từ một hòn đảo nhỏ. Mở rộng không gian, trang trí và farm theo cách của bạn.</p><div class="foot"><code>/menu</code>mở các tính năng chính</div></article>
       <article class="card feat"><div class="ficon"><img data-icon="minion" alt=""></div><h3>MINION</h3><p>Minion đồng hành lo phần thu thập trên đảo, bạn rảnh tay để xây và khám phá.</p><div class="foot"><i class="dot on"></i>Đang hoạt động</div></article>
+      <article class="card feat"><span class="new">MỚI</span><div class="ficon"><img data-icon="pet" alt=""></div><h3>PET ĐỒNG HÀNH</h3><p>Nuôi pet đi theo bên mình, cùng bạn farm, khám phá đảo và săn boss.</p><div class="foot"><i class="dot on"></i>Đang hoạt động</div></article>
       <article class="card feat"><div class="ficon"><img data-icon="sword" alt=""></div><h3>DUNGEON &amp; BOSS</h3><p>Lập tổ đội, vào dungeon và săn boss để mang về trang bị hiếm.</p><div class="foot"><i class="dot on"></i>Đang hoạt động</div></article>
-      <article class="card feat"><div class="ficon"><img data-icon="coin" alt=""></div><h3>KINH TẾ 3 LỚP</h3><p>BAL là tiền chính, Token cho đồ đặc biệt, Danh vọng thể hiện uy tín của bạn.</p><div class="foot"><code>/kiemtien</code>xem các nguồn kiếm</div></article>
-      <article class="card feat"><div class="ficon"><img data-icon="wheat" alt=""></div><h3>FARM NÔNG SẢN</h3><p>Trồng và thu hoạch nông sản ngay trên đảo. Có hướng dẫn riêng trên Discord.</p><div class="foot"><i class="dot on"></i>Đang hoạt động</div></article>
-      <article class="card feat"><div class="ficon"><img data-icon="pet" alt=""></div><h3>LINH THÚ &amp; NHIỆM VỤ</h3><p>Nuôi linh thú đồng hành và làm nhiệm vụ để nhận thưởng mỗi ngày.</p><div class="foot"><code>/quests</code>xem nhiệm vụ</div></article>
+      <article class="card feat"><div class="ficon"><img data-icon="coin" alt=""></div><h3>KINH TẾ</h3><p>Money là tiền chính, Token đổi đồ đặc biệt. Kiếm từ farm, minion, nhiệm vụ và vote mỗi ngày.</p><div class="foot"><code>/kiemtien</code>xem các nguồn kiếm</div></article>
+      <article class="card feat"><div class="ficon"><img data-icon="wheat" alt=""></div><h3>FARM &amp; NHIỆM VỤ</h3><p>Trồng nông sản ngay trên đảo và làm nhiệm vụ để nhận thưởng mỗi ngày.</p><div class="foot"><code>/quests</code>xem nhiệm vụ</div></article>
     </div>
   </section>
 
@@ -415,17 +417,17 @@ footer{background:linear-gradient(rgba(16,10,5,.8),rgba(16,10,5,.88)),var(--dirt
       <div class="card steps-card">
         <div class="tabs" role="tablist" aria-label="Phiên bản Minecraft">
           <button class="tab" role="tab" id="tab-java" aria-selected="true" aria-controls="pane-java" type="button">Java (PC)</button>
-          <button class="tab" role="tab" id="tab-be" aria-selected="false" aria-controls="pane-be" type="button">PE / Bedrock</button>
+          <button class="tab" role="tab" id="tab-be" aria-selected="false" aria-controls="pane-be" type="button">Bedrock</button>
         </div>
         <ol class="steps" id="pane-java" role="tabpanel" aria-labelledby="tab-java">
-          <li><div><b>Mở Minecraft Java 1.21.11</b><p>Từ màn hình chính, chọn <b style="display:inline">Multiplayer</b>.</p></div></li>
-          <li><div><b>Thêm server</b><p>Bấm Add Server, nhập địa chỉ <code>hanzumc.com:31468</code> rồi Done.</p></div></li>
+          <li><div><b>Mở Minecraft Java, bản nào cũng được</b><p>Server nhận từ 1.8 đến 1.21+. Từ màn hình chính, chọn <b style="display:inline">Multiplayer</b>.</p></div></li>
+          <li><div><b>Thêm server</b><p>Bấm Add Server, nhập địa chỉ <code>hanzumc.com</code> rồi Done. Không cần ghi cổng.</p></div></li>
           <li><div><b>Vào đảo</b><p>Chọn HANZU Skyblock, bấm Join Server. Gõ <code>/huongdan</code> để xem cẩm nang.</p></div></li>
         </ol>
         <ol class="steps" id="pane-be" role="tabpanel" aria-labelledby="tab-be" hidden>
-          <li><div><b>Mở Minecraft PE / Bedrock</b><p>Đăng nhập tài khoản Xbox, vào Play rồi chọn thẻ Servers.</p></div></li>
-          <li><div><b>Thêm server</b><p>Bấm Add Server, nhập địa chỉ <code>hanzumc.com</code> và cổng <code>31205</code>.</p></div></li>
-          <li><div><b>Vào đảo</b><p>Lưu rồi bấm Play. Xem phiên bản client phù hợp trong hướng dẫn trên Discord.</p></div></li>
+          <li><div><b>Mở Minecraft Bedrock</b><p>Điện thoại, Windows 10/11 hoặc console. Đăng nhập Xbox, vào Play rồi chọn thẻ Servers.</p></div></li>
+          <li><div><b>Thêm server</b><p>Bấm Add Server, nhập địa chỉ <code>hanzumc.com</code> và cổng <code>25679</code>.</p></div></li>
+          <li><div><b>Vào đảo</b><p>Lưu rồi bấm Play. Gặp lỗi kết nối thì hỏi ở Discord để được hỗ trợ.</p></div></li>
         </ol>
       </div>
       <div class="side">
@@ -434,7 +436,7 @@ footer{background:linear-gradient(rgba(16,10,5,.8),rgba(16,10,5,.88)),var(--dirt
           <div class="chatbox">
             <div><code>/menu</code><span>Mở các tính năng chính</span></div>
             <div><code>/huongdan</code><span>Cẩm nang người chơi</span></div>
-            <div><code>/kiemtien</code><span>Nguồn BAL, Token, danh vọng</span></div>
+            <div><code>/kiemtien</code><span>Nguồn kiếm Money và Token</span></div>
             <div><code>/quests</code><span>Xem nhiệm vụ</span></div>
             <div><code>/mail</code><span>Nhận vật phẩm</span></div>
           </div>
@@ -465,12 +467,12 @@ footer{background:linear-gradient(rgba(16,10,5,.8),rgba(16,10,5,.88)),var(--dirt
         <div class="chest">
           <div class="chest-t">Quà mỗi lượt vote hợp lệ</div>
           <ul class="slots">
-            <li><div class="slot"><img data-icon="coin" alt=""><span class="n">50K</span></div><b>50.000 BAL</b></li>
-            <li><div class="slot"><img data-icon="gem" alt=""><span class="n">200</span></div><b>200 Token</b></li>
-            <li><div class="slot"><img data-icon="star" alt=""><span class="n">500</span></div><b>500 Danh vọng</b></li>
+            <li><div class="slot"><img data-icon="gem" alt=""><span class="n">100</span></div><b>100 Token</b></li>
+            <li><div class="slot"><img data-icon="coin" alt=""><span class="n">25K</span></div><b>25.000 Money</b></li>
+            <li><div class="slot"><img data-icon="xp" alt=""><span class="n">500</span></div><b>500 Exp</b></li>
           </ul>
         </div>
-        <p class="stack">Vote đủ 30 ngày: <b>1.500.000 BAL · 6.000 Token · 15.000 Danh vọng</b></p>
+        <p class="stack">Vote đủ 30 ngày: <b>3.000 Token · 750.000 Money · 15.000 Exp</b></p>
       </div>
       <div class="vote-r">
         <div class="field">
@@ -493,9 +495,9 @@ footer{background:linear-gradient(rgba(16,10,5,.8),rgba(16,10,5,.88)),var(--dirt
     <ol class="rules">
       <li class="card"><p>Tôn trọng mọi người; không xúc phạm, kỳ thị, quấy rối hoặc gây war.</p></li>
       <li class="card"><p>Không spam, tag hàng loạt, quảng cáo hoặc gửi liên kết lạ khi chưa được cho phép.</p></li>
-      <li class="card"><p>Không hack, cheat, dupe hoặc lợi dụng lỗi. Gặp lỗi hãy báo tại kênh bao-loi.</p></li>
+      <li class="card"><p>Không hack, cheat, dupe hoặc lợi dụng lỗi. Gặp lỗi hãy báo tại kênh báo-lỗi.</p></li>
       <li class="card"><p>Không lừa đảo, mạo danh ban quản trị hay tiết lộ thông tin riêng tư của người khác.</p></li>
-      <li class="card"><p>Đăng đúng kênh: tìm đội ở tim-to-doi, trao đổi vật phẩm ở cho-giao-dich.</p></li>
+      <li class="card"><p>Đăng đúng kênh: tìm đội ở tìm-tổ-đội, trao đổi vật phẩm ở chợ-giao-dịch.</p></li>
       <li class="card"><p>Không đăng mật khẩu, mã đăng nhập hoặc thông tin thanh toán lên kênh công khai.</p></li>
       <li class="card"><p>Khi cần hỗ trợ, mô tả rõ sự việc và gửi ảnh/video liên quan.</p></li>
     </ol>
@@ -512,9 +514,9 @@ footer{background:linear-gradient(rgba(16,10,5,.8),rgba(16,10,5,.88)),var(--dirt
         <h3>Thông báo, sự kiện và hỗ trợ đều ở một chỗ</h3>
         <p>Theo dõi lịch sự kiện, giveaway, tìm đồng đội săn boss và mở ticket khi cần giúp đỡ.</p>
         <ul class="chans">
-          <li>thong-bao</li><li>su-kien</li><li>giveaway</li><li>vote</li><li>tim-to-doi</li><li>cho-giao-dich</li><li>mo-ticket</li>
+          <li>thông-báo</li><li>trạng-thái-server</li><li>sự-kiện</li><li>giveaway</li><li>bình-chọn</li><li>tìm-tổ-đội</li><li>chợ-giao-dịch</li><li>mở-ticket</li>
         </ul>
-        <a class="btn" href="https://discord.gg/2d8pBXnRa" target="_blank" rel="noopener">VÀO DISCORD HANZU ↗</a>
+        <a class="btn" href="https://discord.gg/hanzuskyblock" target="_blank" rel="noopener">VÀO DISCORD HANZU ↗</a>
       </div>
       <div class="card helper">
         <span class="tag">ĐANG TUYỂN</span>
@@ -525,7 +527,7 @@ footer{background:linear-gradient(rgba(16,10,5,.8),rgba(16,10,5,.88)),var(--dirt
           <li>Quyền TP, mute/gỡ mute để hỗ trợ</li>
           <li>150 Token mỗi ngày khi đăng nhập</li>
         </ul>
-        <p class="fine">Cần online đều, kiên nhẫn và lịch sự. Nhắn trực tiếp admin trên Discord để đăng ký.</p>
+        <p class="fine">Cần online đều, kiên nhẫn và lịch sự. Xem kênh tuyển-helper-mod trên Discord để đăng ký.</p>
       </div>
     </div>
   </section>
@@ -537,12 +539,13 @@ footer{background:linear-gradient(rgba(16,10,5,.8),rgba(16,10,5,.88)),var(--dirt
       <h2 id="hd-title">CÂU HỎI THƯỜNG GẶP</h2>
     </div>
     <div class="faq">
-      <details><summary>IP vào server là gì?</summary><p class="a">Java: <code>hanzumc.com:31468</code>. PE/Bedrock: địa chỉ <code>hanzumc.com</code>, cổng <code>31205</code>.</p></details>
-      <details><summary>Chơi trên điện thoại được không?</summary><p class="a">Được. Người chơi PE/Bedrock vào chung thế giới với người chơi Java. Phiên bản client phù hợp có trong hướng dẫn trên Discord.</p></details>
-      <details><summary>Server dùng phiên bản nào?</summary><p class="a">Server chạy Minecraft Java 1.21.11 trên nền Paper.</p></details>
-      <details><summary>Vote nhận được gì?</summary><p class="a">Mỗi lượt vote hợp lệ nhận 50.000 BAL, 200 Token và 500 Danh vọng. Mỗi ngày vote được một lần ở mục Vote phía trên.</p></details>
+      <details><summary>IP vào server là gì?</summary><p class="a">Java: <code>hanzumc.com</code>, không cần ghi cổng. Bedrock: địa chỉ <code>hanzumc.com</code>, cổng <code>25679</code>.</p></details>
+      <details><summary>Chơi trên điện thoại được không?</summary><p class="a">Được. Người chơi Bedrock trên điện thoại, Windows 10/11 hoặc console vào chung thế giới với người chơi Java, bằng địa chỉ <code>hanzumc.com</code> cổng <code>25679</code>.</p></details>
+      <details><summary>Server dùng phiên bản nào?</summary><p class="a">Bạn vào được bằng Minecraft Java từ bản 1.8 đến 1.21+, không cần đổi phiên bản.</p></details>
+      <details><summary>Vote nhận được gì?</summary><p class="a">Mỗi lượt vote hợp lệ nhận 100 Token, 25.000 Money và 500 Exp. Mỗi ngày vote được một lần ở mục Vote phía trên.</p></details>
+      <details><summary>Chơi có mất tiền không?</summary><p class="a">Không. HANZU là server Free to Play, ai cũng vào chơi miễn phí.</p></details>
       <details><summary>Liên kết Discord để làm gì?</summary><p class="a">Liên kết tài khoản Minecraft với Discord bằng <code>/lienket</code> để nhận 1.000 Token. Mỗi tài khoản chỉ nhận một lần.</p></details>
-      <details><summary>Gặp lỗi hoặc mất đồ thì làm sao?</summary><p class="a">Mở ticket ở kênh mo-ticket hoặc báo ở kênh bao-loi trên Discord. Ghi tên nhân vật, thời điểm và gửi ảnh/video để được xử lý nhanh.</p></details>
+      <details><summary>Gặp lỗi hoặc mất đồ thì làm sao?</summary><p class="a">Mở ticket ở kênh mở-ticket hoặc báo ở kênh báo-lỗi trên Discord. Ghi tên nhân vật, thời điểm và gửi ảnh/video để được xử lý nhanh.</p></details>
     </div>
   </section>
 </main>
@@ -552,7 +555,7 @@ footer{background:linear-gradient(rgba(16,10,5,.8),rgba(16,10,5,.88)),var(--dirt
   <div class="wrap foot-in">
     <div><b>HANZU SKYBLOCK</b><p>Hẹn gặp bạn giữa những hòn đảo trên mây.</p><p class="mono" style="font-size:22px;color:var(--dirt-ink);margin-top:8px">hanzumc.com</p></div>
     <div><h4>Trang</h4><ul><li><a href="#trang-thai">Trạng thái</a></li><li><a href="#bat-dau">Bắt đầu</a></li><li><a href="#vote">Vote</a></li><li><a href="#noi-quy">Nội quy</a></li></ul></div>
-    <div><h4>Liên kết</h4><ul><li><a href="https://discord.gg/2d8pBXnRa" target="_blank" rel="noopener">Discord</a></li><li><a href="https://minecraft-mp.com/server-s364903" target="_blank" rel="noopener">Minecraft-MP</a></li><li><a href="https://minecraft-mp.com/server/364903/vote/" target="_blank" rel="noopener">Trang vote</a></li></ul></div>
+    <div><h4>Liên kết</h4><ul><li><a href="https://discord.gg/hanzuskyblock" target="_blank" rel="noopener">Discord</a></li><li><a href="https://minecraft-mp.com/server-s364903" target="_blank" rel="noopener">Minecraft-MP</a></li><li><a href="https://minecraft-mp.com/server/364903/vote/" target="_blank" rel="noopener">Trang vote</a></li></ul></div>
     <p class="legal">© 2026 HANZU Skyblock. Không phải dịch vụ chính thức của Minecraft, không liên kết với Mojang hay Microsoft.</p>
   </div>
 </footer>
@@ -560,9 +563,9 @@ footer{background:linear-gradient(rgba(16,10,5,.8),rgba(16,10,5,.88)),var(--dirt
 <div id="toast" role="status" aria-live="polite" hidden></div>
 
 <script>
-const SERVER = { java: "hanzumc.com:31468", api: "https://api.mcsrvstat.us/3/hanzumc.com:31468", voteUrl: "https://minecraft-mp.com/server/364903/vote/" };
+const SERVER = { java: "hanzumc.com", api: "https://api.mcsrvstat.us/3/hanzumc.com", voteUrl: "https://minecraft-mp.com/server/364903/vote/" };
 // last values seen, shown only if the live check can't be reached
-const SNAPSHOT = { online: true, version: "1.21.11", software: "Paper", players: { online: 6, max: 100 }, motd: { clean: ["✦ HANZU SKYBLOCK ✦", "ĐẢO RIÊNG • DUNGEON • BOSS │ hanzumc.com"] }, at: "15:40 ngày 13/10/2026" };
+const SNAPSHOT = { online: true, version: "1.8 - 1.21+", players: { online: 1, max: 200 }, motd: { clean: ["HANZU SKYBLOCK | 1.8 - 1.21+", "Minion • Pet • Dungeon • Free to Play"] }, at: "05:10 ngày 15/10/2026" };
 
 const $ = (id) => document.getElementById(id);
 function rng(seed){ return function(){ seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
@@ -582,6 +585,7 @@ const ICONS = {
   sword:{pal:{k:"#1b1b2b",W:"#e8f6ff",w:"#8fd8ff",g:"#ffd04d",h:"#7a4a1a"},map:["..........kk",".........kWk","........kWwk",".......kWwk.","......kWwk..","..k..kWwk...","..kkkWwk....","...kgwk.....","...kggk.....","..khkkkk....",".khk...kk...",".kk........."]},
   minion:{pal:{k:"#1b1b2b",Y:"#ffd04d",y:"#e0a920",S:"#f1c8a0",B:"#3f7cff",b:"#2b3f8f"},map:["...kkkkkk...","..kYYYYYYk..","..kYyyyyYk..","..kSSSSSSk..","..kSkSSkSk..","..kSSSSSSk..","...kkkkkk...","..kBBBBBBk..",".kSkBBBBkSk.","..kkBBBBkk..","...kbbkbbk..","...kkk.kkk.."]},
   wheat:{pal:{Y:"#ffe066",y:"#d9a520",g:"#5aa93c"},map:[".....Y......","....YyY.....",".....Y..Y...","..Y..yYYy...","..yYYy.Y....","...yY..y....","....yYy.....",".....g......",".....g......","....gg......",".....g......",".....g......"]},
+  xp:{pal:{k:"#1d4d0f",G:"#b7ff5a",g:"#6fdc2b",Y:"#f7ffb0",d:"#3f8f1a"},map:["....kkkk....","..kkggggkk..",".kgGYYGgggk.",".kGYYGGgggk.","kgGYGGGggggk","kgGGGGGggggk","kgGGGGgggggk","kgggGggggddk",".kgggggggdk.",".kkgggggddk.","..kkddddkk..","....kkkk...."]},
   pet:{pal:{k:"#2a1608",O:"#ff8a3d",W:"#fff4e6"},map:[".k........k.","kOk......kOk","kOOk....kOOk","kOOOkkkkOOOk","kOOOOOOOOOOk","kOkkOOOOkkOk","kOkWOOOOWkOk","kOOOOkkOOOOk",".kWWWWWWWWk.","..kWWWWWWk..","...kkkkkk...","............"]}
 };
 function pixelURL(icon){
@@ -648,14 +652,14 @@ voteBtn.addEventListener("click", () => {
 /* ---------- live status ---------- */
 const pad = (n) => String(n).padStart(2, "0");
 function renderStatus(d, live){
-  const on = !!d.online, n = d.players?.online ?? 0, max = d.players?.max ?? 100;
+  const on = !!d.online, n = d.players?.online ?? 0, max = d.players?.max ?? 200;
   const pill = $("st-pill");
   pill.className = "pill " + (live ? (on ? "on" : "off") : "warn");
   pill.querySelector(".dot").className = "dot" + (live && on ? " on" : "");
   $("st-text").textContent = live ? (on ? "Online" : "Offline") : "Chưa kết nối được";
   $("st-n").textContent = on ? n : 0; $("st-max").textContent = max;
   $("st-bar").style.width = (on ? Math.min(100, n / max * 100) : 0) + "%";
-  $("st-meta").textContent = `Phiên bản ${d.version || "1.21.11"}${d.software ? " · " + d.software : ""}`;
+  $("st-meta").textContent = `Phiên bản ${(String(d.version || "").replace(/^[^0-9]*/, "") || "1.8 - 1.21+").replace(" - ", " – ")}`;
   $("mpl-n").textContent = on ? `${n}/${max}` : "Offline";
   $("mpl-bars").classList.toggle("off", !on);
   const lines = d.motd?.clean || SNAPSHOT.motd.clean;
