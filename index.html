@@ -220,6 +220,51 @@ p{margin:0}
 .vote-r .btn{width:100%;font-size:17px}
 .hint{font-size:13.5px;color:var(--muted)}
 
+
+/* nap */
+.nap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;overflow:hidden}
+.nap-l{padding:clamp(20px,3vw,32px);display:grid;gap:16px;align-content:start}
+.nap-r{padding:clamp(20px,3vw,32px);display:grid;gap:14px;align-content:start;background:rgba(0,0,0,.22);border-left:1px solid var(--line)}
+.nap .tab[aria-selected="true"] small{color:var(--bg)}
+.nap .tab small{display:block;font-size:11.5px;font-weight:600;opacity:.85}
+#napname{font:600 18px/1.2 var(--f-body);color:var(--ink);background:var(--bg);border:1px solid var(--line-2);border-radius:12px;padding:14px 16px;width:100%}
+#napname::placeholder,#napcustom::placeholder{color:var(--dim);font-weight:500}
+#napname:focus,#napcustom:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(255,208,77,.18)}
+#napcustom{font:600 16px/1.2 var(--f-body);color:var(--ink);background:var(--bg);border:1px solid var(--line-2);border-radius:12px;padding:12px 14px;width:100%}
+.amts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.amt{background:rgba(0,0,0,.28);border:1px solid var(--line);border-radius:12px;padding:10px 6px;text-align:center;cursor:pointer;color:var(--ink);font:inherit;transition:border-color .12s,background .12s}
+.amt:hover{border-color:var(--line-2)}
+.amt b{display:block;font-family:var(--f-pixel);font-size:24px;line-height:1;font-weight:400}
+.amt span{font-size:12.5px;color:var(--gold);font-weight:700}
+.amt[aria-pressed="true"]{border-color:var(--gold);background:rgba(255,208,77,.12);box-shadow:inset 0 0 0 1px var(--gold)}
+.telcos{display:flex;flex-wrap:wrap;gap:8px}
+.telco{font:700 13.5px var(--f-body);color:var(--muted);background:rgba(0,0,0,.28);border:1px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer}
+.telco[aria-pressed="true"]{color:var(--gold);border-color:var(--gold);background:rgba(255,208,77,.12)}
+.nap-sum{display:flex;justify-content:space-between;align-items:center;gap:10px;border:1px dashed var(--line-2);border-radius:12px;padding:12px 14px}
+.nap-sum b{font-family:var(--f-pixel);font-size:30px;line-height:1;color:var(--gold);font-weight:400}
+.nap .btn{width:100%;font-size:17px}
+.btn.gold{background:var(--gold);color:var(--bg);box-shadow:inset 0 -4px 0 rgba(0,0,0,.25),0 0 30px rgba(255,208,77,.3)}
+.btn.gold:hover{background:#ffe08a;transform:translateY(-2px)}
+.nap-err{color:var(--red);font-size:14px;font-weight:600;min-height:1px}
+.qrbox{background:#fff;border-radius:14px;padding:12px;justify-self:center;width:min(100%,260px);text-align:center}
+.qrbox img{width:100%;display:block}
+.qrbox small{display:block;color:#444;font-size:12px;margin-top:6px}
+.prow{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
+.prow:last-child{border-bottom:0}
+.prow .k{font-size:13px;color:var(--muted)}
+.prow .v{font-weight:700;text-align:right;overflow-wrap:anywhere;display:flex;align-items:center;gap:8px;justify-content:flex-end}
+.prow .v.code{font-family:var(--f-pixel);font-size:26px;font-weight:400;color:var(--gold);letter-spacing:.04em}
+.cp{font:700 12px var(--f-body);color:var(--ink);background:rgba(255,255,255,.06);border:1px solid var(--line-2);border-radius:8px;padding:4px 9px;cursor:pointer;flex:none}
+.nap-note{font-size:13.5px;border-radius:12px;padding:10px 12px;background:rgba(255,107,107,.08);border:1px solid rgba(255,107,107,.3);color:#ffc2c2}
+.nap-note.ok{background:rgba(123,227,107,.08);border-color:rgba(123,227,107,.3);color:#c8f5c0}
+.nap-empty{display:grid;gap:12px;align-content:center;text-align:center;color:var(--muted);min-height:260px}
+.nap-empty img{width:64px;height:64px;image-rendering:pixelated;justify-self:center}
+.nap-empty b{color:var(--ink);font-size:17px}
+.nap-steps{margin:0;padding-left:20px;display:grid;gap:6px;color:var(--muted);font-size:14.5px;text-align:left}
+.nap-steps b{color:var(--ink);font-size:inherit}
+.npane{display:grid;gap:14px}
+.npane[hidden],.nap-empty[hidden]{display:none}
+
 /* rules */
 .rules{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;counter-reset:r}
 .rules li{counter-increment:r;display:grid;grid-template-columns:52px minmax(0,1fr);gap:14px;align-items:start;padding:18px 20px}
@@ -279,6 +324,8 @@ footer{background:linear-gradient(rgba(16,10,5,.8),rgba(16,10,5,.88)),var(--dirt
   .feats{grid-template-columns:repeat(2,minmax(0,1fr))}
   .join,.comm,.vote{grid-template-columns:1fr}
   .vote-r{border-left:0;border-top:1px solid var(--line)}
+  .nap{grid-template-columns:1fr}
+  .nap-r{border-left:0;border-top:1px solid var(--line)}
 }
 @media (max-width:820px){
   .links{display:none}
@@ -302,6 +349,7 @@ footer{background:linear-gradient(rgba(16,10,5,.8),rgba(16,10,5,.88)),var(--dirt
   .mpl .pc{grid-column:2}
   .slots .desc{display:none}
   .chatbox div{grid-template-columns:1fr;gap:0}
+  .amts{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -319,13 +367,14 @@ footer{background:linear-gradient(rgba(16,10,5,.8),rgba(16,10,5,.88)),var(--dirt
       <a href="#loi-choi">Lối chơi</a>
       <a href="#bat-dau">Bắt đầu</a>
       <a href="#vote">Vote</a>
+      <a href="#nap">Nạp Xu</a>
       <a href="#noi-quy">Nội quy</a>
       <a href="#hoi-dap">Hỏi đáp</a>
     </div>
     <a class="cta" href="https://discord.gg/hanzuskyblock" target="_blank" rel="noopener">VÀO DISCORD</a>
     <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-links">Menu</button>
     <div class="mobile-links" id="mobile-links" hidden>
-      <a href="#trang-thai">Trạng thái</a><a href="#loi-choi">Lối chơi</a><a href="#bat-dau">Bắt đầu</a><a href="#vote">Vote</a><a href="#noi-quy">Nội quy</a><a href="#hoi-dap">Hỏi đáp</a>
+      <a href="#trang-thai">Trạng thái</a><a href="#loi-choi">Lối chơi</a><a href="#bat-dau">Bắt đầu</a><a href="#vote">Vote</a><a href="#nap">Nạp Xu</a><a href="#noi-quy">Nội quy</a><a href="#hoi-dap">Hỏi đáp</a>
       <a href="https://discord.gg/hanzuskyblock" target="_blank" rel="noopener">Vào Discord ↗</a>
     </div>
   </div>
@@ -485,6 +534,77 @@ footer{background:linear-gradient(rgba(16,10,5,.8),rgba(16,10,5,.88)),var(--dirt
     </div>
   </section>
 
+
+  <!-- NAP XU -->
+  <section class="wrap section" id="nap" aria-labelledby="np-title">
+    <div class="head">
+      <p class="eyebrow">Nạp Xu</p>
+      <h2 id="np-title">ỦNG HỘ SERVER, NHẬN XU NGAY</h2>
+      <p>1.000đ = 1 Xu. Chuyển khoản được thêm <b style="color:var(--gold)">+15% Xu</b>. Xu tự cộng vào tài khoản, dùng trong game bằng <code class="mono" style="color:var(--gold)">/donate</code> để mua rank, key và đồ Donate.</p>
+    </div>
+    <div class="card nap">
+      <div class="nap-l">
+        <div class="field">
+          <label for="napname">Tên nhân vật trong game</label>
+          <input id="napname" type="text" autocomplete="nickname" autocapitalize="off" spellcheck="false" maxlength="21" placeholder="Ví dụ: HANZUxPayToWin">
+          <p class="hint">Nhập đúng tên khi vào game. Người chơi Bedrock (điện thoại) có dấu chấm ở đầu, ví dụ <b>.Vuprom</b>.</p>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Cách nạp">
+          <button class="tab" role="tab" id="ntab-bank" aria-selected="true" aria-controls="npane-bank" type="button">Chuyển khoản QR<small>+15% Xu</small></button>
+          <button class="tab" role="tab" id="ntab-card" aria-selected="false" aria-controls="npane-card" type="button">Thẻ cào<small>Viettel, Vina, Mobi…</small></button>
+        </div>
+        <div id="npane-bank" role="tabpanel" aria-labelledby="ntab-bank" class="npane">
+          <div class="amts" id="bank-amts"></div>
+          <input id="napcustom" inputmode="numeric" placeholder="Hoặc nhập số khác, ví dụ 150.000">
+          <div class="nap-sum"><span>Bạn nhận được</span><b id="bank-xu">0 Xu</b></div>
+          <button class="btn gold" id="bank-go" type="button">TẠO MÃ QR</button>
+          <p class="nap-err" id="bank-err"></p>
+        </div>
+        <div id="npane-card" role="tabpanel" aria-labelledby="ntab-card" class="npane" hidden>
+          <div class="telcos" id="telcos"></div>
+          <div class="amts" id="card-amts"></div>
+          <div class="nap-sum"><span>Bạn nhận được</span><b id="card-xu">0 Xu</b></div>
+          <button class="btn gold" id="card-go" type="button">NHẬP SERIAL &amp; MÃ THẺ ↗</button>
+          <p class="nap-err" id="card-err"></p>
+        </div>
+      </div>
+      <div class="nap-r" id="nap-r">
+        <div class="nap-empty" id="nap-empty">
+          <img data-icon="coin" alt="">
+          <b>Chọn số tiền rồi bấm Tạo mã QR</b>
+          <ol class="nap-steps">
+            <li>Nhập <b>tên trong game</b> và chọn số tiền.</li>
+            <li>Mở app ngân hàng, <b>quét mã QR</b> (số tiền và nội dung tự điền).</li>
+            <li>Chuyển xong, Xu tự cộng sau khoảng <b>1 phút</b>. Không cần online.</li>
+          </ol>
+        </div>
+        <div class="nap-empty" id="nap-cardhelp" hidden>
+          <img data-icon="gem" alt="">
+          <b>Nạp bằng thẻ cào điện thoại</b>
+          <ol class="nap-steps">
+            <li>Chọn <b>nhà mạng</b> và <b>đúng mệnh giá</b> in trên thẻ.</li>
+            <li>Bấm nút để mở trang nạp thẻ của server, nhập <b>serial</b> và <b>mã thẻ</b> (cào lớp bạc).</li>
+            <li>Thẻ đúng: Xu cộng sau 10 giây – 3 phút. Chọn sai mệnh giá chỉ nhận <b>50%</b>, thẻ sai hoặc đã dùng không được cộng.</li>
+          </ol>
+        </div>
+        <div id="nap-pay" class="npane" hidden>
+          <div class="qrbox"><img id="nap-qr" alt="Mã QR chuyển khoản"><small>Mở app ngân hàng → Quét mã</small></div>
+          <div>
+            <div class="prow"><span class="k">Ngân hàng</span><span class="v" id="p-bank"></span></div>
+            <div class="prow"><span class="k">Số tài khoản</span><span class="v"><span id="p-acc"></span><button class="cp" data-cp="p-acc" type="button">Chép</button></span></div>
+            <div class="prow"><span class="k">Chủ tài khoản</span><span class="v" id="p-holder"></span></div>
+            <div class="prow"><span class="k">Số tiền</span><span class="v"><span id="p-amt"></span><button class="cp" data-cp="p-amt-raw" type="button">Chép</button></span></div>
+            <div class="prow"><span class="k">Nội dung</span><span class="v code"><span id="p-code"></span><button class="cp" data-cp="p-code" type="button">Chép</button></span></div>
+            <div class="prow"><span class="k">Nhận được</span><span class="v" style="color:var(--gold)" id="p-xu"></span></div>
+          </div>
+          <span id="p-amt-raw" hidden></span>
+          <p class="nap-note">Ghi <b>đúng nội dung</b> ở trên (quét QR là tự điền). Nội dung này gắn với tên <b id="p-name"></b>, sai nội dung hệ thống sẽ không biết cộng cho ai.</p>
+          <p class="nap-note ok">Xu tự cộng sau khoảng 1 phút khi tiền vào tài khoản. Đang online sẽ có thông báo và pháo hoa trong game. Cần hỗ trợ thì gửi biên lai cho admin trên Discord.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- RULES -->
   <section class="wrap section" id="noi-quy" aria-labelledby="nq-title">
     <div class="head">
@@ -554,7 +674,7 @@ footer{background:linear-gradient(rgba(16,10,5,.8),rgba(16,10,5,.88)),var(--dirt
 <footer>
   <div class="wrap foot-in">
     <div><b>HANZU SKYBLOCK</b><p>Hẹn gặp bạn giữa những hòn đảo trên mây.</p><p class="mono" style="font-size:22px;color:var(--dirt-ink);margin-top:8px">hanzumc.com</p></div>
-    <div><h4>Trang</h4><ul><li><a href="#trang-thai">Trạng thái</a></li><li><a href="#bat-dau">Bắt đầu</a></li><li><a href="#vote">Vote</a></li><li><a href="#noi-quy">Nội quy</a></li></ul></div>
+    <div><h4>Trang</h4><ul><li><a href="#trang-thai">Trạng thái</a></li><li><a href="#bat-dau">Bắt đầu</a></li><li><a href="#vote">Vote</a></li><li><a href="#nap">Nạp Xu</a></li><li><a href="#noi-quy">Nội quy</a></li></ul></div>
     <div><h4>Liên kết</h4><ul><li><a href="https://discord.gg/hanzuskyblock" target="_blank" rel="noopener">Discord</a></li><li><a href="https://minecraft-mp.com/server-s364903" target="_blank" rel="noopener">Minecraft-MP</a></li><li><a href="https://minecraft-mp.com/server/364903/vote/" target="_blank" rel="noopener">Trang vote</a></li></ul></div>
     <p class="legal">© 2026 HANZU Skyblock. Không phải dịch vụ chính thức của Minecraft, không liên kết với Mojang hay Microsoft.</p>
   </div>
@@ -647,6 +767,72 @@ nameInput.addEventListener("change", () => store.set("hanzu.name", nameInput.val
 voteBtn.addEventListener("click", () => {
   syncVote(); const n = nameInput.value.trim(); if (n) store.set("hanzu.name", n);
   toast(n ? `Đã điền sẵn tên <b>${esc(n)}</b> trên trang vote` : "Nhớ nhập đúng tên trong game trên trang vote");
+});
+
+
+/* ---------- nạp xu ---------- */
+const NAP = {
+  bank: { bin: "970422", name: "MB Bank", acc: "0367096716", holder: "LE TUAN VU", bonus: 15, min: 5000, max: 50000000,
+          presets: [10000, 20000, 50000, 100000, 200000, 500000] },
+  card: { bonus: 0, page: "http://hanzumc.com:31356/nap",
+          telcos: { VIETTEL: [10000,20000,30000,50000,100000,200000,300000,500000,1000000], VINAPHONE: [10000,20000,30000,50000,100000,200000,300000,500000],
+                    MOBIFONE: [10000,20000,30000,50000,100000,200000,300000,500000], VNMOBI: [10000,20000,50000,100000,200000,300000,500000],
+                    ZING: [10000,20000,50000,100000,200000,500000,1000000], GATE: [10000,20000,50000,100000,200000,500000,1000000], VCOIN: [10000,20000,50000,100000,200000,500000,1000000] },
+          labels: { VIETTEL: "Viettel", VINAPHONE: "Vinaphone", MOBIFONE: "Mobifone", VNMOBI: "Vietnamobile", ZING: "Zing", GATE: "Gate", VCOIN: "Vcoin" } }
+};
+const vnd = (n) => Number(n).toLocaleString("vi-VN") + "đ", fmt = (n) => Number(n).toLocaleString("vi-VN");
+const xuOf = (v, b) => Math.floor(v / 1000 * (1 + b / 100) + 1e-9);
+const napName = $("napname");
+napName.value = store.get("hanzu.name", "") || "";
+napName.addEventListener("change", () => { const n = napName.value.trim(); if (n) { store.set("hanzu.name", n); if (!nameInput.value) { nameInput.value = n; syncVote(); } } });
+function napValidName(errId){ const n = napName.value.trim(); if (!/^\.?[A-Za-z0-9_]{2,20}$/.test(n)) { $(errId).textContent = "Nhập tên nhân vật trong game trước nhé."; napName.focus(); return null; } store.set("hanzu.name", n); return n; }
+const ntabs = [$("ntab-bank"), $("ntab-card")];
+let napPaid = false;
+ntabs.forEach(t => t.addEventListener("click", () => {
+  ntabs.forEach(o => { const on = o === t; o.setAttribute("aria-selected", String(on)); $(o.getAttribute("aria-controls")).hidden = !on; });
+  const card = t.id === "ntab-card";
+  $("nap-cardhelp").hidden = !card; $("nap-empty").hidden = card || napPaid; $("nap-pay").hidden = card || !napPaid;
+}));
+function amtGrid(el, list, bonus, onPick){
+  el.innerHTML = "";
+  list.forEach(v => { const b = document.createElement("button"); b.type = "button"; b.className = "amt"; b.setAttribute("aria-pressed", "false");
+    b.innerHTML = `<b>${fmt(v / 1000)}K</b><span>${fmt(xuOf(v, bonus))} Xu</span>`;
+    b.addEventListener("click", () => { el.querySelectorAll(".amt").forEach(x => x.setAttribute("aria-pressed", String(x === b))); onPick(v); });
+    el.appendChild(b); });
+}
+let bankAmt = 0, cardTelco = "VIETTEL", cardAmt = 0;
+const updBank = () => $("bank-xu").textContent = fmt(bankAmt ? xuOf(bankAmt, NAP.bank.bonus) : 0) + " Xu";
+amtGrid($("bank-amts"), NAP.bank.presets, NAP.bank.bonus, v => { bankAmt = v; $("napcustom").value = ""; updBank(); });
+$("napcustom").addEventListener("input", e => { const v = parseInt(e.target.value.replace(/\D/g, "")) || 0; e.target.value = v ? fmt(v) : ""; bankAmt = v;
+  $("bank-amts").querySelectorAll(".amt").forEach(x => x.setAttribute("aria-pressed", "false")); updBank(); });
+async function webCode(name){
+  const h = new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(name.toLowerCase())));
+  return "HZW" + [...h.slice(0, 4)].map(b => b.toString(16).padStart(2, "0")).join("").toUpperCase();
+}
+$("bank-go").addEventListener("click", async () => {
+  $("bank-err").textContent = ""; const n = napValidName("bank-err"); if (!n) return;
+  if (!bankAmt) { $("bank-err").textContent = "Chọn hoặc nhập số tiền muốn nạp."; return; }
+  if (bankAmt < NAP.bank.min || bankAmt > NAP.bank.max) { $("bank-err").textContent = `Số tiền từ ${vnd(NAP.bank.min)} đến ${vnd(NAP.bank.max)}.`; return; }
+  const code = await webCode(n), B = NAP.bank;
+  $("nap-qr").src = `https://img.vietqr.io/image/${B.bin}-${B.acc}-compact2.png?amount=${bankAmt}&addInfo=${encodeURIComponent(code)}&accountName=${encodeURIComponent(B.holder)}`;
+  $("p-bank").textContent = B.name; $("p-acc").textContent = B.acc; $("p-holder").textContent = B.holder;
+  $("p-amt").textContent = vnd(bankAmt); $("p-amt-raw").textContent = bankAmt; $("p-code").textContent = code; $("p-name").textContent = n;
+  $("p-xu").textContent = `${fmt(xuOf(bankAmt, B.bonus))} Xu`;
+  napPaid = true; $("nap-empty").hidden = true; $("nap-pay").hidden = false;
+  if (matchMedia("(max-width:980px)").matches) $("nap-r").scrollIntoView({ behavior: "smooth", block: "start" });
+});
+document.addEventListener("click", e => { const b = e.target.closest(".cp"); if (!b) return; const t = $(b.dataset.cp).textContent;
+  (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(() => toast(`Đã chép <b>${esc(t)}</b>`)).catch(() => toast("Không chép được, bạn giữ để chép tay nhé")); });
+const telEl = $("telcos");
+Object.keys(NAP.card.telcos).forEach((id, i) => { const b = document.createElement("button"); b.type = "button"; b.className = "telco"; b.textContent = NAP.card.labels[id] || id; b.setAttribute("aria-pressed", String(i === 0));
+  b.addEventListener("click", () => { cardTelco = id; cardAmt = 0; telEl.querySelectorAll(".telco").forEach(x => x.setAttribute("aria-pressed", String(x === b))); drawCard(); });
+  telEl.appendChild(b); });
+function drawCard(){ amtGrid($("card-amts"), NAP.card.telcos[cardTelco], NAP.card.bonus, v => { cardAmt = v; $("card-xu").textContent = fmt(xuOf(v, NAP.card.bonus)) + " Xu"; }); $("card-xu").textContent = "0 Xu"; }
+drawCard();
+$("card-go").addEventListener("click", () => {
+  $("card-err").textContent = ""; const n = napValidName("card-err"); if (!n) return;
+  if (!cardAmt) { $("card-err").textContent = "Chọn mệnh giá in trên thẻ."; return; }
+  window.open(`${NAP.card.page}#card&name=${encodeURIComponent(n)}&telco=${cardTelco}&amount=${cardAmt}`, "_blank", "noopener");
 });
 
 /* ---------- live status ---------- */
